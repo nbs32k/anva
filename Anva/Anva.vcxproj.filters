@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="init.c" />
+    <ClCompile Include="ldr\ldrinit.c">
+      <Filter>ldr</Filter>
+    </ClCompile>
+    <ClCompile Include="ldr\ldrpeb.c">
+      <Filter>ldr</Filter>
+    </ClCompile>
+    <ClCompile Include="ldr\ldrhook.c">
+      <Filter>ldr</Filter>
+    </ClCompile>
+    <ClCompile Include="ldr\minhook\src\buffer.c">
+      <Filter>ldr\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ldr\minhook\src\hook.c">
+      <Filter>ldr\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ldr\minhook\src\trampoline.c">
+      <Filter>ldr\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ldr\minhook\src\hde\hde32.c">
+      <Filter>ldr\minhook\src\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="ldr\minhook\src\hde\hde64.c">
+      <Filter>ldr\minhook\src\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="anva.h" />
+    <ClInclude Include="ldr\ldr.h">
+      <Filter>ldr</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr\minhook\src\buffer.h">
+      <Filter>ldr\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr\minhook\src\trampoline.h">
+      <Filter>ldr\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr\minhook\src\hde\hde32.h">
+      <Filter>ldr\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr\minhook\src\hde\hde64.h">
+      <Filter>ldr\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr\minhook\src\hde\pstdint.h">
+      <Filter>ldr\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr\minhook\src\hde\table32.h">
+      <Filter>ldr\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr\minhook\src\hde\table64.h">
+      <Filter>ldr\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr\minhook\minhook.h">
+      <Filter>ldr\minhook</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ldr">
+      <UniqueIdentifier>{79839da9-e00e-4d9f-8ec2-0215cfca6826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ldr\minhook">
+      <UniqueIdentifier>{6dc74f1e-61fd-4798-9e97-cdce0ce74ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ldr\minhook\src">
+      <UniqueIdentifier>{e229e2fc-f32c-4dc8-97e8-b5cb6616e531}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ldr\minhook\src\hde">
+      <UniqueIdentifier>{4fcc6192-9cb1-4a94-aa20-9635001d21a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
