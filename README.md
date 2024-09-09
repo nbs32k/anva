@@ -3,6 +3,8 @@ Anva allows the monitoring of userland programs through running it within the sa
 
 Anva consists of a self-made PE Loader that mimics Windows' PE Loader (situated in NTDLL.DLL) to manual map the target program into the same virtual address space as Anva. This is needed so Anva has shared memory access with the target.
 
+Anva tricks the newly mapped program into thinking it runs freely on bare metal by manipulating system structures like PEB.
+
 Anva supports:
   - [x] Both x86 and x64 PE formats
   - [x] VMProtect support
