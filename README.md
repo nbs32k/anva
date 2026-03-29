@@ -1,9 +1,9 @@
 # Anva - Analyzing Non-Volatile Applications
-Anva allows the monitoring of userland programs through running it within the same virtual address space.
+Anva allows the monitoring of userland programs by executing them within the same virtual address space.
 
-Anva consists of a self-made PE Loader that mimics Windows' PE Loader (situated in NTDLL.DLL) to manual map the target program into the same virtual address space as Anva. This is needed so Anva has shared memory access with the target.
+Anva features a self-made PE Loader that mimics Windows' PE Loader (found in NTDLL.DLL) and manually maps the target program into Anva's address space.
 
-Anva tricks the newly mapped program into thinking it runs freely on bare metal by manipulating system structures like PEB.
+The tool spoofs internal structures (eg. PEB) to mimic a bare metal environment.
 
 Anva supports:
   - [x] Both x86 and x64 PE formats
@@ -14,9 +14,9 @@ Anva supports:
   - [x] SEH handlers against exceptions
   - [x] TLS and TLS callbacks
   - [x] PEB setup
-  - [x] Supports console, window and DLL applications.
+  - [x] Console, window and DLL applications.
 
-Anva is powered by [MinHook](https://github.com/TsudaKageyu/minhook) for both x86 and x64 trampoline hooks. Anva uses tramp-hooks to monitor specific WinAPI and NTAPI calls and respond accordingly, but this mechanism can be modified to use instrumentation callback for better results.
+Anva is powered by [MinHook](https://github.com/TsudaKageyu/minhook) for both its 32-bit and 64-bit trampoline hook implementations. Anva uses tramp-hooks to monitor specific WinAPI and NTAPI calls and respond accordingly (this mechanism can be modified to use instrumentation callback for better results).
 
 Anva can be used in different domains:
   - Malware analysis
@@ -25,7 +25,7 @@ Anva can be used in different domains:
   - API monitoring
   - CRC bypassing
 
-Always use a Virtual Machine for Malware Analysis while running Anva because Anva does not come with full sandboxing techniques by default.
+This is just a POC, always use a Virtual Machine while executing malicious software with Anva.
 
 Anva running a VMProtect'd game:
 ![image-modified](https://github.com/nbs32k/anva/assets/68382500/1eafb652-4423-4182-b3f0-bbf63798c35d)
